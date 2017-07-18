@@ -175,7 +175,7 @@ new_data$type<-as.factor(ifelse(new_data$weekdays %in% c("sábado", "domingo"),
 
 steps_taken_weekdays<-new_data%>%
 	group_by(type,interval)%>%
-	summarise(steps=sum(steps))
+	summarise(steps=mean(steps))
 ```
 
 **Making the plot** 
