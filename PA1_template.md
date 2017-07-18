@@ -57,6 +57,11 @@ day",xlab="steps taken")
 original_data<-summary(steps_taken$steps)
 original_data
 ```
+
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##      41    8841   10765   10766   13294   21194
+
+
 The mean of steps taken each day is 10766
 
 
@@ -83,6 +88,11 @@ main="Average Daily Pattern",xlab="Intervals",ylab="Number of Steps")
 max_number<-steps_interval[which.max(steps_interval$steps),]
 max_number
 ```
+## # A tibble: 1 x 2
+##   interval    steps
+##      <int>    <dbl>
+## 1      835 206.1698
+
 The maximun average number of steps is 206 and it is located in the interval 835.
 
 
@@ -119,6 +129,9 @@ day",xlab="steps taken")
 new_data_report<-summary(steps_taken_new$steps)
 new_data_report
 ```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##      41    9819   10766   10766   12811   21194
+
 The mean of steps taken each day is 10766
 
 **Impact of imputing missing values**
@@ -133,6 +146,10 @@ hist2<-hist(steps_taken_new$steps,breaks=15,col="grey",main="Total Number of ste
 impact_report<-rbind(original_data,new_data_report)
 impact_report
 ```
+##                 Min. 1st Qu.   Median     Mean 3rd Qu.  Max.
+## original_data     41    8841 10765.00 10766.19   13294 21194
+## new_data_report   41    9819 10766.19 10766.19   12811 21194
+
 With the introduction of the missing values, the new mean is 10766 and the new median is 10766 . Comparing the means between the original dataset and the new dataset, this value has not changed, and the median has changed to the same value of the mean. 
 This is due to the filling of missing values with mean values; which means that al least the 13% (missing values of original data) are the same as the mean, making the data closer to this value.
 
