@@ -191,4 +191,4 @@ with(steps_taken_weekdays,
       ylab = "Number of Steps"))
 ```
 ![plot of chunk date](https://github.com/sofiyag87/ReproducibleData/blob/master/PA1_template_files/figure-html/date-1.png)
-From the figure we can see that the person who owns this dataset makes long walks trought the week and gets relaxed on the weekends.
+From the figure we can see that the person who owns this dataset walks the similar average steps on weekdays and weekends.
